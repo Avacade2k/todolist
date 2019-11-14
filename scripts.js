@@ -4,17 +4,8 @@ function handle(e){
         if(e.keyCode === 13){
             e.preventDefault();
             addThing();
-            alert("Enter was pressed");
         }
     }
-
-
-
-
-
-
-
-
 
 
 function addThing() {
