@@ -12,14 +12,12 @@
     <button onclick="switcheroo()">Quick Switcheroo</button>
     <div class="container">
         <h2>Simple To Do List</h2>
-        <b>For lazy scrubs</b>
-
+        <h3>For lazy scrubs</h3>
+        
         <form name="toDoList">
-            <input type="text" name="ListItem" id="addItem" onkeypress="handle(event)" />
+        <input type="text" name="ListItem" id="addItem" onkeypress="handle(event)" />
         </form>
-
-        <button onclick="addThing()">Add</button>
-        <br />
+        <button id="addButton" onclick="addThing()">Add</button>
         <ul id="sortable">
             <li>Test</li>
         </ul>
