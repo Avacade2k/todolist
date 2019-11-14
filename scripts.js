@@ -1,4 +1,7 @@
 var list = [];
+var node;
+var textnode; 
+
 
 function handle(e){
         if(e.keyCode === 13){
@@ -9,15 +12,21 @@ function handle(e){
 
 
 function addThing() {
-    list.push(toDoList.ListItem.value);
-    console.log(list);
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode(list[list.length-1]);
-    node.appendChild(textnode);
-    document.getElementById("myList").appendChild(node);
+    if(toDoList.ListItem.value != ""){
+        list.push(toDoList.ListItem.value);
+        console.log(list);
+        textnode = document.createTextNode(list[list.length-1]);
+        node = document.createElement("LI");
+        node.appendChild(textnode);
+        document.getElementById("sortable").appendChild(node);       
+       }
+    else{
+        alert("Input cannot be empty!");
+    }
 }
 
-    
-$( ".draggable" ).draggable({
-    grid: [ 50, 20 ]
-});
+$( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+    $( "#sortable" ).sortable( "option", "axis", "y" );
+  } );
