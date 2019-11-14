@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    background-color: lightgrey;
 }
 #sortable { 
     display: inline-block;
@@ -15,8 +16,8 @@ body{
     text-align: center;
     font-size: 1.4em;
     height: 18px; 
-    background-color:lime;
     border: solid;
+    vertical-align: middle;
 }
 #sortable li span { 
     position: absolute;
@@ -27,11 +28,11 @@ input {
   padding: 10px;
   font-size: 16px;
 }
-ul li:hover {
-  background: #ddd;
+button:hover {
+  background: #F6B635;
 }
-ul li:nth-child(odd) {
-  background: #f9f9f9;
+input:hover{
+    background-color: mintcream;
 }
 ul li {
   padding: 12px 8px 12px 40px;
@@ -50,4 +51,11 @@ ul {
 button{
    border: solid; 
     width: 10%;
+    background-color: #F9C04D;
+}
+.container{
+    border: solid;
+    padding: 20px;
+    margin: 20px; 40px;
+    background-color: #FFE1A2;
 }

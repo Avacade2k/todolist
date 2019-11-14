@@ -28,7 +28,8 @@ function addThing() {
         textnode = document.createTextNode(list[list.length-1]);
         node = document.createElement("LI");
         node.appendChild(textnode);
-        document.getElementById("sortable").appendChild(node);       
+        document.getElementById("sortable").appendChild(node);
+        document.getElementById("addItem").value = "";
        }
     else{
         alert("Input cannot be empty!");
