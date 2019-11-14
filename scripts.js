@@ -10,6 +10,12 @@ function handle(e){
         }
     }
 
+function switcheroo(){
+    document.getElementById("blyat").style.backgroundColor="pink";
+    if(blyat.style.backgroundColor == "blue"){
+        document.getElementById("blyat").style.backgroundColor="lime";
+    }
+}
 
 function addThing() {
     if(toDoList.ListItem.value != ""){
