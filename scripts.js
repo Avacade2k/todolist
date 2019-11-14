@@ -1,6 +1,9 @@
 var list = [];
 var node;
 var textnode; 
+var red;
+var green;
+var blue;
 
 
 function handle(e){
@@ -11,15 +14,16 @@ function handle(e){
     }
 
 function switcheroo(){
-    document.getElementById("blyat").style.backgroundColor="pink";
-    if(blyat.style.backgroundColor == "blue"){
-        document.getElementById("blyat").style.backgroundColor="lime";
+    red = Math.floor(Math.random()*256);
+    green = Math.floor(Math.random()*256);
+    blue = Math.floor(Math.random()*256);
+    document.getElementById("blyat").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    
     }
-}
 
 function addThing() {
-    if(toDoList.ListItem.value != ""){
-        list.push(toDoList.ListItem.value);
+    if(addItem.value != ""){
+        list.push(document.getElementById("addItem").value);
         console.log(list);
         textnode = document.createTextNode(list[list.length-1]);
         node = document.createElement("LI");
