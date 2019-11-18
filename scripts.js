@@ -13,7 +13,7 @@ function handle(e){
         }
     }
 
-function switcheroo(){
+function switcheroo() {
     red = Math.floor(Math.random()*256);
     green = Math.floor(Math.random()*256);
     blue = Math.floor(Math.random()*256);
@@ -22,6 +22,10 @@ function switcheroo(){
     document.getElementById("addButton").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
     document.getElementById("Switch").style.backgroundColor = "rgb("+blue+","+red+","+green+")";
     }
+
+function del() {
+    $(".checked").remove();
+}
 
 function addThing() {
     if(addItem.value != ""){

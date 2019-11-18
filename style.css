@@ -41,6 +41,11 @@ ul li {
   background: #eee;
   font-size: 18px;
 }
+button{
+  border: solid; 
+  background-color: #F9C04D;
+    
+}
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
   background: #888;
@@ -68,12 +73,14 @@ ul {
 #addButton{
   padding: 10px;
   font-size: 16px;
+  width: 10%;  
 }
-button{
-   border: solid; 
-    width: 10%;
-    background-color: #F9C04D;
-    color: 
+#delete{
+    height: 30px;
+    width: 30px;
+}
+#switch{
+    height: 50px
 }
 .container{
     border: solid;
