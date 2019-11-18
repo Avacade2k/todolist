@@ -23,6 +23,10 @@ function switcheroo(){
     document.getElementById("Switch").style.backgroundColor = "rgb("+blue+","+red+","+green+")";
     }
 
+function cross(){
+  $("li").toggleClass( "checked" );
+}
+
 function addThing() {
     if(addItem.value != ""){
         list.push(document.getElementById("addItem").value);
@@ -32,6 +36,7 @@ function addThing() {
         node.appendChild(textnode);
         document.getElementById("sortable").appendChild(node);
         document.getElementById("addItem").value = "";
+        node.setAttribute("onclick", "cross()")
        }
     else{
         alert("Input cannot be empty!");
@@ -43,3 +48,11 @@ $( function() {
     $( "#sortable" ).disableSelection();
     $( "#sortable" ).sortable( "option", "axis", "y" );
   } );
+
+$(document).ready(function(){
+    $("li").on({
+        'click': function(){
+        $(this).css({"text-decoration": "overline"});
+        }
+    });    
+});
