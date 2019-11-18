@@ -18,7 +18,9 @@ function switcheroo(){
     green = Math.floor(Math.random()*256);
     blue = Math.floor(Math.random()*256);
     document.getElementById("blyat").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
-    
+    document.getElementById("trash").style.backgroundColor = "rgb("+blue+","+red+","+green+")";
+    document.getElementById("addButton").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    document.getElementById("Switch").style.backgroundColor = "rgb("+blue+","+red+","+green+")";
     }
 
 function addThing() {

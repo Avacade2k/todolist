@@ -9,14 +9,14 @@
 </head>
 
 <body id="blyat">
-    <button onclick="switcheroo()">Quick Switcheroo</button>
-    <div class="container">
+    <button id="Switch" onclick="switcheroo()"><p>Quick Switcheroo</p></button>
+    <div class="container" id="trash">
         <h2>Simple To Do List</h2>
         <h3>For lazy scrubs</h3>
         
         <div name="toDoList">
-        <input type="text" name="ListItem" id="addItem" onkeypress="handle(event)" />
-        <button id="addButton" onclick="addThing()">Add</button>
+        <input type="text" name="ListItem" id="addItem" onkeypress="handle(event)" placeholder="thing you want to do"/>
+            <button id="addButton" onclick="addThing()">Add</button>
         </div>
 
         <ul id="sortable">
