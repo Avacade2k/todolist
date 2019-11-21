@@ -5,6 +5,7 @@ var red;
 var green;
 var blue;
 var compList = [];
+var uniqueList = [];
 
 
 function handle(e) {
@@ -37,7 +38,8 @@ function del() {
 function addThing() {
     
     if (list.includes(addItem.value)) {
-        alert("item already exists");    
+        alert("item already exists");  
+        
     }else if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
         console.log(list);
@@ -49,6 +51,7 @@ function addThing() {
         $("li").last().click(function () {
         $(this).toggleClass("checked");
         });
+        
     } else {
         alert("Input cannot be empty!");
     }
