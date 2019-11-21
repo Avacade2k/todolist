@@ -34,22 +34,20 @@ function del() {
         compList = [];
 }
 
-function same() { 
-    //$(list).each(function() {
-        console.log("not same, same func");
-        if ($("#addItem").text() === "abc") {
+function same(x) { 
+    $(list).each(function() {
+        if (x == $(this).text()) {
             return true;
-            alert("lool")
         }
-        console.log("not same, same func");
-    //});
+        console.log("not same, same func")
+    });
 }
 
 function addThing() {
     
-    if (same()) {
+    if (same(addItem.value)) {
         alert("item already exists");    
-    } else if (addItem.value != "") {
+    }else if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
         console.log(list);
         textnode = document.createTextNode(list[list.length - 1]);
@@ -77,41 +75,13 @@ $(document).ready(function(){
     var boxWidth =  $("#switch").width();
     $("#switch").mouseenter(function(){
         $(this).animate({
-            height: boxHeight*1.3,
-            width: boxWidth*1.3
+            height: boxHeight*1.2,
+            width: boxWidth*1.2
         });
     }).mouseleave(function(){
         $(this).animate({
-            height: "50",
-            width: "120"
-        });
-    });
-});
-
-$(document).ready(function(){
-    $("#delete").mouseenter(function(){
-        $(this).animate({
-            height: "50",
-            width: "50"
-        });
-    }).mouseleave(function(){
-        $(this).animate({
-            height: "40",
-            width: "40"
-        });
-    });
-});
-
-$(document).ready(function(){
-    $("#addButton").mouseenter(function(){
-        $(this).animate({
-            height: "50",
-            width: "150"
-        });
-    }).mouseleave(function(){
-        $(this).animate({
-            height: "40",
-            width: "120"
+            height: boxHeight,
+            width: boxWidth
         });
     });
 });
