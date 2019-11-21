@@ -75,13 +75,41 @@ $(document).ready(function(){
     var boxWidth =  $("#switch").width();
     $("#switch").mouseenter(function(){
         $(this).animate({
-            height: boxHeight*1.2,
-            width: boxWidth*1.2
+            height: boxHeight*1.3,
+            width: boxWidth*1.3
         });
     }).mouseleave(function(){
         $(this).animate({
-            height: boxHeight,
-            width: boxWidth
+            height: "50",
+            width: "120"
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#delete").mouseenter(function(){
+        $(this).animate({
+            height: "50",
+            width: "50"
+        });
+    }).mouseleave(function(){
+        $(this).animate({
+            height: "40",
+            width: "40"
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#addButton").mouseenter(function(){
+        $(this).animate({
+            height: "50",
+            width: "150"
+        });
+    }).mouseleave(function(){
+        $(this).animate({
+            height: "40",
+            width: "120"
         });
     });
 });
