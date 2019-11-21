@@ -37,7 +37,10 @@ function del() {
 
 
 function addThing() {
-      if (addItem.value != "") {
+      if (list.includes(addItem.value)){
+          alert("Item already exists");
+          }
+      else if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
         console.log(list);
         textnode = document.createTextNode(list[list.length - 1]);
