@@ -5,6 +5,7 @@ var red;
 var green;
 var blue;
 var compList = [];
+var uniqueList = [];
 
 
 function handle(e) {
@@ -34,20 +35,9 @@ function del() {
         compList = [];
 }
 
-function same(x) { 
-    $(list).each(function() {
-        if (x == $(this).text()) {
-            return true;
-        }
-        console.log("not same, same func")
-    });
-}
 
 function addThing() {
-    
-    if (same(addItem.value)) {
-        alert("item already exists");    
-    }else if (addItem.value != "") {
+      if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
         console.log(list);
         textnode = document.createTextNode(list[list.length - 1]);
