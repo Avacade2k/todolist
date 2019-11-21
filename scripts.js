@@ -50,3 +50,19 @@ $(function () {
     $("#sortable").disableSelection();
     $("#sortable").sortable("option", "axis", "y");
 });
+
+$(document).ready(function(){
+    var boxHeight = $("#switch").height();
+    var boxWidth =  $("#switch").width();
+    $("#switch").mouseenter(function(){
+        $(this).animate({
+            height: boxHeight*1.2,
+            width: boxWidth*1.2
+        });
+    }).mouseleave(function(){
+        $(this).animate({
+            height: boxHeight,
+            width: boxWidth
+        });
+    });
+});
