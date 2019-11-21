@@ -4,6 +4,7 @@ var textnode;
 var red;
 var green;
 var blue;
+var compList = [];
 
 
 function handle(e) {
@@ -24,12 +25,31 @@ function switcheroo() {
 }
 
 function del() {
-    
+    $('.checked').each(function(){
+        compList.push($(this).text());
+    });
     $(".checked").remove();
+        list = $(list).not(compList).get();
+        console.log(list);
+        compList = [];
+}
+
+function same() { 
+    //$(list).each(function() {
+        console.log("not same, same func");
+        if ($("#addItem").text() === "abc") {
+            return true;
+            alert("lool")
+        }
+        console.log("not same, same func");
+    //});
 }
 
 function addThing() {
-    if (addItem.value != "") {
+    
+    if (same()) {
+        alert("item already exists");    
+    } else if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
         console.log(list);
         textnode = document.createTextNode(list[list.length - 1]);
@@ -43,6 +63,7 @@ function addThing() {
     } else {
         alert("Input cannot be empty!");
     }
+    
 }
 
 $(function () {
