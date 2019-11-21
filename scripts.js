@@ -24,6 +24,7 @@ function switcheroo() {
 }
 
 function del() {
+    
     $(".checked").remove();
 }
 
