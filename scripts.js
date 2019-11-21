@@ -34,18 +34,9 @@ function del() {
         compList = [];
 }
 
-function same(x) { 
-    $(list).each(function() {
-        if (x == $(this).text()) {
-            return true;
-        }
-        console.log("not same, same func")
-    });
-}
-
 function addThing() {
     
-    if (same(addItem.value)) {
+    if (list.includes(addItem.value)) {
         alert("item already exists");    
     }else if (addItem.value != "") {
         list.push(document.getElementById("addItem").value);
