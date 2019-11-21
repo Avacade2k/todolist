@@ -13,10 +13,9 @@ body{
 }
 #sortable li { 
     margin: 0 3px 3px 3px;
-    padding: 0.4em;
+    padding: 5px;
     text-align: center;
-    font-size: 1.4em;
-    height: 18px; 
+    font-size: 1.4em; 
     border: solid;
     vertical-align: middle;
 }
@@ -40,6 +39,7 @@ ul li {
   list-style-type: none;
   background: #eee;
   font-size: 18px;
+  z-index: -1;
 }
 button{
   border: solid; 
@@ -48,7 +48,7 @@ button{
 }
 .checked{
   text-decoration: line-through;
-  color: white;
+  color: grey;
 }
 ul {
   margin: 0;
