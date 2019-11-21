@@ -22,7 +22,8 @@ function switcheroo() {
     document.getElementById("blyat").style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
     document.getElementById("trash").style.backgroundColor = "rgb(" + blue + "," + red + "," + green + ")";
     document.getElementById("addButton").style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-    document.getElementById("Switch").style.backgroundColor = "rgb(" + blue + "," + red + "," + green + ")";
+    document.getElementById("switch").style.backgroundColor = "rgb(" + blue + "," + red + "," + green + ")";
+    document.getElementById("delete").style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
 }
 
 function del() {
